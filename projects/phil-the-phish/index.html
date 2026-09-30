@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phil the Positivity Fish</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- siden ligger i main -->
+    <main class="page">
+
+        <!-- Container for billede + kontrolpanel -->
+        <section class="scenario">
+
+            <!-- Billedskift via js -->
+            <div class="image-area">
+                <img id="sceneImage" src="img/scene-intro.png" alt="Scenario image">
+            </div>
+
+            <!-- Tekst & knapper -->
+            <section class="control-panel">
+
+                <!-- Teksten skiftes via js -->
+                <div id="textBox" class="text-box">
+                    Text placeholder
+                </div>
+
+                <!-- Knapper via js -->
+                <div id="buttonBox" class="button-box"></div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- js til sidst - HTML loaded først -->
+    <script src="js/script.js"></script>
+</body>
+</html>
