@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Info &amp; contact | Marcus Kje</title>
+  <meta name="description" content="About Marcus Kje, fine artist and multimedia designer, and contact form.">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">MARCUS KJE<span class="brand-cursor" aria-hidden="true">_</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="link-hover" href="index.html">Home</a>
+      <a class="link-hover" href="artworks.html">Artworks</a>
+      <a class="link-hover" href="media-design.html">Media_design</a>
+      <a class="link-hover" href="info.html" aria-current="page">Info &amp; contact</a>
+      <a class="link-hover" href="index.html#events">Events</a>
+      <a class="link-hover" href="#" data-instagram>Instagram ↗</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu +</button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="top"><span class="brand">MARCUS KJE<span class="brand-cursor" aria-hidden="true">_</span></span><button class="menu-close menu-toggle" type="button" style="display:block">Close ×</button></div>
+    <nav aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="artworks.html">Artworks</a>
+      <a href="media-design.html">Media_design</a>
+      <a href="info.html" aria-current="page">Info &amp; contact</a>
+      <a href="index.html#events">Events</a>
+      <a href="#" data-instagram>Instagram ↗</a>
+      <a class="menu-erosion" href="erosion.html">_Erosion.exe</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <div class="info-head">
+      <img class="info-drawing" src="img/info/claw-drawing.png" alt="">
+      <h1 class="page-title">Info</h1>
+    </div>
+
+    <div class="info-top">
+      <div class="info-imgs">
+        <img src="img/info/portrait.jpg" alt="Marcus Kje, self-portrait in a window reflection">
+        <img src="img/info/ramble.jpg" alt="Digital collage of code text and a drawn claw">
+      </div>
+      <div class="info-bio">
+        <h2>MARCUS KJE</h2>
+        <p class="info-facts-lead">Danish fine artist and media designer</p>
+        <ul class="info-facts">
+          <li>b. 1995</li>
+          <li>Athens / Copenhagen based</li>
+        </ul>
+        <p>Fine artist &amp; multimedia designer working in different mediums, graphic and web design, digital media and sculptural practice.</p>
+        <p class="info-links label">
+          <a class="link-hover" href="#contact">Contact form <span class="arrow" aria-hidden="true">↓</span></a>
+          <a class="link-hover" href="#" data-instagram>Instagram <span class="arrow" aria-hidden="true">↗</span></a>
+        </p>
+      </div>
+    </div>
+
+    <section class="profile" aria-labelledby="profile-title">
+      <p class="label accent" id="profile-title">Profile 01</p>
+      <hr class="rule" style="margin-top:14px">
+      <div class="profile-cols">
+        <div class="profile-col">
+          <details><summary>Practice</summary>
+            <h3>01 / Practice</h3>
+            <ul><li>Fine arts</li><li>Graphics</li><li>Web</li><li>Installation</li></ul>
+          </details>
+        </div>
+        <div class="profile-col">
+          <details><summary>Alumni // CV</summary>
+            <h3>02 / Alumni // CV</h3>
+            <ul><li>BFA Fine Arts – HFBK, 2020–2023</li><li>Multimedia Design – IBA Kolding, 2025–current</li></ul>
+          </details>
+        </div>
+        <div class="profile-col">
+          <details><summary>Design tools / method</summary>
+            <h3>03 / Design tools + method</h3>
+            <ul><li>Figma</li><li>Adobe</li><li>HTML / CSS</li><li>Research</li></ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-head">
+        <h2 class="page-title" id="contact-title">Contact</h2>
+        <p>For project enquiries, collaborations or other proposals, use the form below.</p>
+      </div>
+
+      <div class="contact-body">
+        <img class="contact-img" src="img/info/contact.webp" alt="">
+
+        <form class="form" id="contact-form" novalidate>
+          <!-- the former "typical enquiries" are now the choice of topic (replaces the subject dropdown) -->
+          <fieldset class="topics" aria-describedby="topic-err">
+            <legend>I'm writing about *</legend>
+            <div class="topic-list">
+              <label><input type="radio" name="topic" value="Editorial / poster"><span>Editorial / poster</span></label>
+              <label><input type="radio" name="topic" value="Web / interaction"><span>Web / interaction</span></label>
+              <label><input type="radio" name="topic" value="Art / exhibition"><span>Art / exhibition</span></label>
+              <label><input type="radio" name="topic" value="Internship / job"><span>Internship / job</span></label>
+              <label><input type="radio" name="topic" value="Other"><span>Other</span></label>
+            </div>
+            <span class="err" id="topic-err"></span>
+          </fieldset>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" autocomplete="name" required aria-describedby="name-err">
+              <span class="err" id="name-err"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+              <span class="err" id="email-err"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required aria-describedby="message-err"></textarea>
+            <span class="err" id="message-err"></span>
+          </div>
+
+          <div class="form-actions">
+            <a class="label link-hover" href="#" data-instagram>Or on Instagram ↗</a>
+            <button class="btn" type="submit">Send message →</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer label">
+    <div class="left"><a class="link-hover" href="index.html">Marcus Kje</a><a class="link-hover" href="info.html">About</a></div>
+    <a class="footer-erosion" href="erosion.html">[Run Erosion.exe]</a>
+    <div class="right"><a class="link-hover" href="info.html#contact">Contact</a><a class="link-hover" href="#" data-instagram>Instagram ↗</a></div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

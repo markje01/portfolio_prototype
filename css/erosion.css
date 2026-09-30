@@ -1,0 +1,59 @@
+/* Erosion.exe, its own black "system" look (no shared header/footer by choice). */
+
+/* no soft cross-fade into or out of the Erosion universe: it has its own glitch */
+@view-transition { navigation: none; }
+
+body.erosion { --accent: #e34624; background: #000; color: #e8e6df; font-size: 15px; }
+.erosion a:hover { color: var(--accent); }
+
+.ero-header { display: grid; grid-template-columns: 1fr auto auto auto; gap: 70px; padding: 20px 22px; font-size: 13px; white-space: nowrap; }
+.ero-dim { color: #cfccc4; }
+.ero-dead { text-decoration: line-through; text-decoration-thickness: 1px; opacity: .7; }
+
+/* "EROSION.EXE / RUNNING" → hover shows INTERCEPT; click deletes the page and glitches home */
+.ero-intercept { position: relative; justify-self: end; font: inherit; color: inherit; text-align: right; cursor: var(--cursor-link); }
+.ero-intercept::after {
+  content: 'INTERCEPT'; position: absolute; inset: -4px -8px; display: grid; place-items: center;
+  background: var(--accent); color: #000; font-weight: 700; letter-spacing: .12em; opacity: 0;
+}
+.ero-intercept:hover::after, .ero-intercept:focus-visible::after, .ero-intercept.is-active::after { opacity: 1; animation: intercept-flicker .4s steps(2, end) infinite; }
+@keyframes intercept-flicker { 50% { opacity: .75; transform: translateX(1px); } }
+
+.ero-caret { display: inline-block; width: .6em; height: 1em; margin-left: 1px; vertical-align: -2px; background: var(--accent); animation: caret-blink .7s steps(1) infinite; }
+@keyframes caret-blink { 50% { opacity: 0; } }
+.ero-hidden { opacity: 0 !important; transition: opacity .35s steps(4, end); }
+.ero-figure, .ero-texture, .ero-unresolved img { transition: opacity .6s steps(5, end); }
+.ero-flicker { filter: invert(1) contrast(3); }
+
+.ero-main { position: relative; min-height: 880px; overflow: hidden; }
+.ero-figure { position: absolute; left: 6%; top: 60px; width: 13%; min-width: 120px; }
+.ero-texture { position: absolute; left: 21%; top: 250px; width: 33%; opacity: .85; pointer-events: none; }
+.ero-intro { position: absolute; left: 59%; top: 80px; max-width: 540px; }
+.ero-intro h1 { font-size: 15px; font-weight: 400; margin: 0; }
+.ero-intro p { margin: 0 0 18px; }
+.ero-status { color: var(--accent); font-size: 10px; margin-top: 60px !important; }
+
+.ero-items { list-style: none; margin: 0; padding: 0; }
+.ero-items li { position: absolute; left: var(--x); top: var(--y); font-size: 14px; line-height: 1.7; z-index: 2; }
+
+.ero-unresolved { position: absolute; left: 76%; top: 50%; margin: 0; width: 220px; text-align: center; font-size: 14px; }
+.ero-unresolved img { margin-top: 20px; }
+.ero-fault { position: absolute; left: 5%; top: 84%; color: var(--accent); font-size: 12px; }
+.ero-mutation { position: absolute; left: 76%; top: 92%; font-size: 9px; color: #9a978f; }
+
+.ero-footer { display: flex; justify-content: flex-end; gap: 26px; padding: 22px; font-size: 10px; font-weight: 700; border-top: 1px solid #262626; }
+
+@media (max-width: 1000px) {
+  .ero-header { grid-template-columns: 1fr auto; gap: 10px 20px; font-size: 11px; }
+  .ero-header > :nth-child(even) { text-align: right; }
+  .ero-main { min-height: 0; padding: 20px 20px 40px; display: flex; flex-direction: column; gap: 26px; }
+  .ero-main > * { position: relative !important; inset: auto !important; }
+  .ero-figure { width: 110px; }
+  .ero-texture { position: absolute !important; inset: 160px auto auto 0 !important; width: 100%; opacity: .5; z-index: 0; }
+  .ero-intro, .ero-items, .ero-unresolved { z-index: 1; }
+  .ero-intro { max-width: none; }
+  .ero-status { margin-top: 24px !important; }
+  .ero-items { display: grid; gap: 22px; }
+  .ero-items li { position: static; font-size: 12px; }
+  .ero-unresolved { width: 100%; max-width: 300px; text-align: left; }
+}

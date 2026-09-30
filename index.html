@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcus Kje | Fine artist / media designer</title>
+  <meta name="description" content="Portfolio of Marcus Kje: sculpture, installation, graphic design, web and digital media.">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">MARCUS KJE<span class="brand-cursor" aria-hidden="true">_</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="link-hover" href="index.html" aria-current="page">Home</a>
+      <a class="link-hover" href="artworks.html">Artworks</a>
+      <a class="link-hover" href="media-design.html">Media_design</a>
+      <a class="link-hover" href="info.html">Info &amp; contact</a>
+      <a class="link-hover" href="index.html#events">Events</a>
+      <a class="link-hover" href="#" data-instagram>Instagram ↗</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu +</button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="top"><span class="brand">MARCUS KJE<span class="brand-cursor" aria-hidden="true">_</span></span><button class="menu-close menu-toggle" type="button" style="display:block">Close ×</button></div>
+    <nav aria-label="Mobile">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="artworks.html">Artworks</a>
+      <a href="media-design.html">Media_design</a>
+      <a href="info.html">Info &amp; contact</a>
+      <a href="index.html#events">Events</a>
+      <a href="#" data-instagram>Instagram ↗</a>
+      <a class="menu-erosion" href="erosion.html">_Erosion.exe</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">MARCUS<br>KJE</h1>
+        <p class="hero-role label accent">Visual artist / media designer</p>
+        <div class="hero-text">
+          <p>Fine artist working primarily with sculpture, material experiments and installation, alongside graphic design, web and other digital media.</p>
+        </div>
+        <a class="hero-about" href="info.html">
+          <span class="label">About me <span class="arrow" aria-hidden="true">↗</span></span>
+          <span class="hero-about-guide">Background, practice, tools and how to get in touch</span>
+        </a>
+      </div>
+      <div class="hero-media">
+        <img class="hero-img" src="img/hero/retainer.png" alt="Retainer: white concrete sculpture on a TV wall mount, held by steel wires">
+      </div>
+    </section>
+
+    <section id="selected" aria-labelledby="sel-title">
+      <div class="section-head">
+        <h2 class="label" id="sel-title"><a class="section-jump" href="#selected">Selected work <span class="arrow" aria-hidden="true">↓</span></a></h2>
+        <a class="label accent more-link" href="artworks.html">More artworks <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="carousel">
+        <button class="chev chev--prev" type="button" aria-label="Previous works"><img src="img/icons/chevron-right.svg" alt=""></button>
+        <div class="carousel-track"></div>
+        <button class="chev chev--next" type="button" aria-label="Next works"><img src="img/icons/chevron-right.svg" alt=""></button>
+      </div>
+    </section>
+
+    <section class="events" id="events" aria-labelledby="ev-title">
+      <h2 class="label" id="ev-title">Upcoming &amp; current events</h2>
+      <ul data-events></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer label">
+    <div class="left"><a class="link-hover" href="index.html">Marcus Kje</a><a class="link-hover" href="info.html">About</a></div>
+    <a class="footer-erosion" href="erosion.html">[Run Erosion.exe]</a>
+    <div class="right"><a class="link-hover" href="info.html#contact">Contact</a><a class="link-hover" href="#" data-instagram>Instagram ↗</a></div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
